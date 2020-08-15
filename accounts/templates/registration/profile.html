@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block body %}
+
+<!-- start banner -->
+<section class="banner">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="banner-title">
+                    <h1>{{profile.user.username}}</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end banner -->
+
+
+<!-- start courses -->
+<section class="courses">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="shadow py-5 my-5 px-3 rounded-lg">
+                    <p class="text-primary lead">name: {{profile.user.first_name}} {{profile.user.last_name}}</p>
+                    <p class="text-primary lead">email: {{profile.user.email}} </p>
+                    <p class="text-primary lead">phone: {{profile.phone}} </p>
+                </div>
+
+            </div>
+            <a href="{% url 'accounts:editprofile' %}" class="btn btn-primary"> Edit Profile</a>
+        </div>
+
+
+    </div>
+
+</section>
+<!-- end courses -->
+
+
+<!-- start pagination -->
+
+<!-- end pagination -->
+{% endblock body %}

@@ -1,0 +1,109 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clever</title>
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css'%}">
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+    <link rel="stylesheet" href="{% static 'css/all.min.css'%}">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css'%}" type="text/css">
+
+
+</head>
+
+<body>
+
+    <!-- start navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
+        <a class="navbar-brand" href="{% url 'course:home' %}"><span>C</span>LEVE<span>R</span></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+
+                <li {% if request.path == '/' %} class="nav-item active" {% else %} class="nav-item" {% endif %}>
+                    <a class="nav-link" href="{% url 'course:home' %}">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li {% if 'course_list' in request.path %} class="nav-item active" {% else %} class="nav-item"
+                    {% endif %}>
+                    <a class="nav-link" href="{% url 'course:course_list' %}">Courses</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'course:home' %}">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'course:home' %}">Contact</a>
+                </li>
+
+
+            </ul>
+            <div class="log">
+                {% if request.user.is_authenticated %}
+                <a href="{% url 'accounts:profile' %}" class="btn btn-outline-primary my-2 my-sm-0">Profile</a>
+                <a href="{% url 'logout' %}" class="btn btn-outline-primary my-2 my-sm-0">Logout</a>
+                {% else %}
+                <a href="{% url 'login' %}" class="btn btn-outline-primary my-2 my-sm-0">Login</a>
+                {% endif %}
+            </div>
+
+            <a href="{% url 'course:add_course' %}" class="btn btn-primary my-2 my-sm-0">Add Course</a>
+
+
+        </div>
+    </nav>
+    <!-- end navbar -->
+
+    {% block body %}
+
+
+    {% endblock body %}
+
+
+
+
+
+
+    <!-- start footr -->
+    <footer>
+        <div class="container text-center">
+            <h2>CLEVER</h2>
+            <P>Copyright ©2020 All rights reserved </P>
+            <p>made with <i class="fa fa-heart"></i> by <a href="#">GEKA</a></p>
+
+        </div>
+        <div class="footer-contact">
+            <div class="row">
+                <div class="col-md-6">
+                    <ul>
+                        <li>PHONE: 010203040</li>
+                        <li>EMAIL: Geka@gmail.com</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <ul class="icons">
+                        <li>Follow us</li>
+                        <li><a href=""><i class="fa fa-facebook-square"></i></a></li>
+                        <li><a href=""><i class="fa fa-instagram"></i></a></li>
+                        <li><a href=""><i class="fa fa-twitter"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- end footr -->
+
+
+    <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/npm.js' %}"></script>
+
+</body>
+
+</html>

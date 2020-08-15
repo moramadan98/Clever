@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+
+{% block body %}
+<div class="mx-auto my-5 container">
+  <p class="text-success ">Logged out!</p>
+  <a href="{% url 'login'%}">Click here to login again.</a>
+</div>
+{% endblock %}

@@ -1,0 +1,151 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block body %}
+<!-- start hero -->
+<section class="hero">
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="head-title">
+                    <h1>Let's Study Together</h1>
+
+                    <a href="{% url 'course:course_list' %}" class="btn btn-primary">Get Started</a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- end hero -->
+
+<!-- start about -->
+<section class="about" id='1'>
+    <div class="container ">
+        <div class="about-title ">
+            <h2>ABOUT</h2>
+        </div>
+        <div class="about-describtion">
+            <p class="lead">Consectetur adipiscing elit, sued do eiusmod tempor ididunt udfgt labore et dolore magna
+                aliqua. Quis
+                ipsum suspendisces gravida. Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus.
+                Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus.</p>
+            <p class="lead">Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus.
+                Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan.Consectetur adipiscing elit, sued
+                do eiusmod tempor ididunt udfgt labore et dolore magna aliqua. Quis ipsum suspendisces gravida.
+                Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan</p>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- end about -->
+
+<!-- start carousel -->
+<section class="comment">
+
+    <div class="container">
+        <div class="comment-title">
+            <h2>WHAT THEY SAY</h2>
+        </div>
+        <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+
+
+            <div class="carousel-inner">
+                <div class="carousel-item active text-center">
+
+                    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore.</p>
+                    <span>MOHAMED RAMADAN</span>
+                </div>
+                <div class="carousel-item text-center">
+
+                    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore.</p>
+                    <span>MOHAMED RAMADAN</span>
+                </div>
+                <div class="carousel-item text-center">
+
+                    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore.</p>
+                    <span>MOHAMED RAMADAN</span>
+                </div>
+            </div>
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active">
+                    <img src="{% static 'images/04.jpg' %}">
+                </li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="1">
+                    <img src="{% static 'images/06.jpg' %}">
+                </li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="2">
+                    <img src="{% static 'images/07.jpg' %}">
+                </li>
+            </ol>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- end carousel -->
+
+<!-- start contact -->
+<section class="contact" id='2'>
+    <div class="container ">
+        <div class="about-title ">
+            <h2>CONTACT</h2>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="Contact-Info">
+                    <h2>Contact Info</h2>
+                    <ul>
+                        <li>Business Hours : 9:00 AM - 18:00 PM</li>
+                        <li>Number : +44 300 303 0266</li>
+                        <li>Email : info@clever.com</li>
+                        <li>Address : 10 Suffolk st Soho, London, UK</li>
+                    </ul>
+
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <div class="In-Touch">
+                    <h2>Get In Touch</h2>
+
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <input type="text" class="form-control" placeholder='Name'>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <input type="email" class="form-control" id="inputEmail4" placeholder='Email'>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <textarea cols="30" rows="10" placeholder="Message"
+                                    style="height: 131px; width: 100%;"></textarea>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <button type="submit" class="btn btn-primary">SEND</button>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+</section>
+<!-- end contact -->
+
+
+{% endblock body %}

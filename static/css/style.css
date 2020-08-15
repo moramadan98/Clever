@@ -1,0 +1,348 @@
+body{
+    font-family: 'Mukta', sans-serif;
+    height: 100%;
+    width: 100%;
+}
+
+/*======================== start navbar =====================*/
+
+.nav-item{
+    padding-left: 30px;
+}
+.nav-link:hover{
+    color:  #3762f0 !important;
+}
+.log{
+    margin-right: 20px;
+    
+}
+.navbar{
+    padding: 20px 20px;
+    background-color: #fff !important;
+}
+.navbar-brand{
+    margin-left: 20px;
+    margin-right: 170px;
+    font-size: 30px;
+    letter-spacing: 5px;
+    font-weight: 700;
+}
+.navbar-brand span{
+    font-size: 30px;
+    color:  #3762f0;
+}
+.navbar-brand:hover{
+    transition: .3s;
+    color: #3762f0 !important;
+}
+.navbar-brand:hover span{
+    color: #000 ;
+    transition: .3s;
+}
+/*======================== end navbar =====================*/
+
+/* =================================================================================================== */
+
+/*======================== start footer =====================*/
+footer{
+    background-color: #252525;
+    padding-top: 50px;
+    
+}
+footer p {
+    color: rgba(255, 255, 255, 0.2);
+}
+footer h2{
+    color: #fff;
+}
+.footer-contact{
+    border-top: 1px solid #4c4c4c;
+    background-color: #1f1f1f;
+}
+.footer-contact ul {
+    color: rgba(255, 255, 255, 0.2);
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    
+}
+.footer-contact ul a{
+    text-decoration: none;
+    color:rgba(255, 255, 255, 0.2) ;
+}
+.footer-contact ul li {
+    display: inline-block;
+    padding: 15px ;
+    border-right: 1px solid #4c4c4c;
+}
+.footer-contact .icons{
+    float: right;
+  
+}
+.footer-contact li:hover , .footer-contact li a:hover ,footer p:hover{
+    color: #fff;
+    transition: .3s;
+}
+/*======================== end footer =====================*/
+
+/* =================================================================================================== */
+
+/*======================== start hero =====================*/
+
+.hero{
+    background: url(../images/bg1.jpg) no-repeat top center;
+    min-height: 700px;
+    width: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.hero .head-title{
+    margin-top: 300px;
+}
+.hero .head-title .btn-primary{
+    background-color:#3762f0 ;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.hero .head-title h1{
+    color: #000;
+    font-weight: 700;
+    font-size: 50px;
+}
+/*======================== end hero =====================*/
+/* =================================================================================================== */
+
+/*======================== start about =====================*/
+.about{
+    margin: 70px 0;
+}
+ .about-title{
+    padding: 0;
+    margin-bottom: 30px;
+    
+}
+ .about-title h2{
+    border-bottom: 2px solid #3762f0;
+    font-weight: 700;
+    color: #000;
+    font-size: 40px;
+}
+.about .about-describtion{
+    color: #464d65;
+    font-size: 16px;
+    line-height: 30px;
+
+}
+/*======================== end about =====================*/
+/* =================================================================================================== */
+/*======================== start carousel =====================*/
+
+
+
+/*======================== end carousel =====================*/
+.comment{
+    background:#3762f0 ;
+    
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+.comment .container{
+    margin-top: 50px;
+}
+
+.comment .carousel-indicators li{
+      
+    text-indent: 0;
+    width: 80px;
+    height: 80px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    overflow: hidden;
+    opacity: .5;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    transition: .5s;
+    margin: 5px;
+}
+
+.comment .carousel-indicators{
+    position: static;
+    margin-top: 50px;
+    left: auto;
+    width: 100%;
+    margin-left: 0;
+    
+}
+.comment .carousel-indicators li img{
+    max-width: 100%;
+}
+.comment .carousel-inner{
+    min-height: 100px;    
+}
+.comment .carousel-indicators .active{
+    border: 2px solid #000;
+    opacity: 1;
+  }
+
+ .comment .carousel-item{
+     color: #fff;
+ } 
+.comment span{
+    color: black;
+    font-weight: 700;
+    font-size: 20px;
+}
+.comment-title h2{
+    border-bottom: 2px solid #fff;
+    font-weight: 700;
+    color: #000;
+    font-size: 40px;
+}
+.comment-title{
+    padding: 0;
+    margin-bottom: 30px;
+}
+/*======================== end carousel =====================*/
+/* =================================================================================================== */
+/*======================== start contact =====================*/
+.contact{
+    margin: 70px 0;
+}
+.contact ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.contact .Contact-Info{
+    padding: 35px 30px;
+    border: 1px solid #ebebeb;
+    border-radius: 6px;
+    margin-bottom: 50px;
+}
+.contact .btn-primary{
+    margin: auto;
+    display: inline-block;
+    width: 100%;
+    height: 40px;
+    background-color: #3762f0;
+font-weight: 600;
+text-transform: uppercase;
+letter-spacing: 1px;
+font-size: 20px;
+color: #ffffff;
+border: 1px solid transparent;
+border-radius: 6px;
+padding: 0 30px;
+line-height: 40px;
+text-align: center;
+-webkit-transition-duration: 300ms;
+transition-duration: 300ms;
+overflow: hidden;
+}
+.In-Touch{
+position: relative;
+box-shadow: 0 3px 20px rgba(0, 0, 0, 0.15);
+padding: 35px 50px;
+border-radius: 6px;
+background-color: #ffffff;
+}
+/*======================== end contact =====================*/
+
+
+.banner{
+    background: url(../images/banner.png) no-repeat top center;
+    min-height: 300px;
+    width: 100%;
+    background-size: cover;
+    position: relative;
+}
+.banner .banner-title{
+    margin: 100px 70px;
+}
+.banner .banner-title h1{
+    color: #fff;
+    font-weight: 700;
+    font-size: 70px;
+}
+.course-item{
+    margin-top: 50px;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.15);
+}
+.courses{
+    margin: 70px 0;
+}
+.course-item .card-title{
+    font-weight: 700;
+    font-size: 30px;
+    color: black;
+}
+.course-item .btn-primary{
+    margin: auto;
+    display: inline-block;
+    width: 100%;
+    height: 40px;
+    background-color: #3762f0;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 20px;
+    color: #ffffff;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    padding: 0 30px;
+    line-height: 40px;
+    text-align: center;
+    -webkit-transition-duration: 300ms;
+    transition-duration: 300ms;
+    overflow: hidden;
+}
+.course-inf{
+    color: #464d65;
+    font-size: 16px;
+    line-height: 30px;
+    margin: 20px 0;
+}
+
+.course-item .price h3{
+    font-size: 20px;
+    font-weight: 400;
+    color: #00aa1c;
+}
+.course-item .price {
+    margin-bottom: 20px;
+}
+
+.course-description{
+    margin: 70px 0;
+}
+
+.course-description .tab-pane{
+    margin-top: 50px;
+}
+
+.course-description p{
+    color: #464d65;
+}
+.course-description .des{
+    margin-bottom: 50px;
+}
+.course-description .des h2{
+    color: #000;
+    font-weight: 700;
+    font-size: 30px;
+}
+.course-description a {
+    text-decoration: none ;
+} 
+.feat-inf ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    color: #464d65;
+}
+.feat-inf ul li {
+    margin-top: 20px;
+}

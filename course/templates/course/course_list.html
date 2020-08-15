@@ -1,0 +1,111 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% load bootstrap4 %}
+{% load crispy_forms_tags %}
+
+{% block body %}
+
+<!-- start banner -->
+<section class="banner">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="banner-title">
+                    <h1>{{courses|length}}+ Course</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end banner -->
+
+
+<!-- start courses -->
+<section class="courses">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="In-Touch">
+                    <form method='GET'>
+                        <div class="row">
+                            <div class="col">
+                                {{filter.form.title|as_crispy_field}}
+
+                            </div>
+                            <div class="col">
+                                {{filter.form.instructor|as_crispy_field}}
+                            </div>
+                            <div class="col">
+                                {{filter.form.description|as_crispy_field}}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                {{filter.form.price|as_crispy_field}}
+                            </div>
+                            <div class="col">
+                                {{filter.form.category|as_crispy_field}}
+                            </div>
+                            <div class="col">
+                                <button type="submit" class="btn btn-primary">Search</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            {% for course in courses %}
+            <div class="col-md-4">
+                <div class="course-item">
+                    <img src="{{course.image.url}}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{course.title}}</h5>
+                        <div class="course-inf">
+                            <span>{{course.instructor}}</span> <i class="fa fa-dot-circle"></i>
+                            <span>{{course.category}}</span>
+                        </div>
+                        <p class="card-text">{{course.description}}</p>
+                        <div class="price text-center">
+                            <h3>{{course.price}}$</h3>
+                        </div>
+                        <a href="{% url 'course:course_details' course.id %}" class="btn btn-primary">Apply Now</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+</section>
+<!-- end courses -->
+
+
+<!-- start pagination -->
+
+<nav aria-label="...">
+    <ul class="pagination justify-content-center">
+        {% if courses.has_previous %}
+        <li class="page-item ">
+            <a class="page-link" href="?page={{courses.previous_page_number}}" tabindex="-1" aria-disabled="true"><i
+                    class="fa fa-backward"></i></a>
+        </li>
+        {% endif %}
+
+        {% for i in courses.paginator.page_range %}
+        <li class="page-item"><a class="page-link" href="?page={{i}}">{{i}}</a></li>
+        {% endfor %}
+
+        {% if courses.has_next %}
+        <li class="page-item">
+            <a class="page-link" href="?page={{courses.next_page_number}}"><i class="fa fa-forward"></i></a>
+        </li>
+        {% endif %}
+    </ul>
+</nav>
+
+
+
+<!-- end pagination -->
+{% endblock body %}
